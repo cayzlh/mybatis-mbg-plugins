@@ -3,6 +3,30 @@
 
 > 插件内容根据  [https://github.com/itfsw/mybatis-generator-plugin](https://github.com/itfsw/mybatis-generator-plugin)修改, 感谢作者的分享;
 > 在以上作者插件的基础上, 完善了注释模板等
+
+--------------------------------------------
+## 直接引入, 在pom.xml的相应节点中添加:
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>com.cayzlh</groupId>
+        <artifactId>plugins</artifactId>
+        <version>1.0</version>
+    </dependency>
+</dependencies>
+
+<repositories>
+    <repository>
+        <id>cayzlh-mvn-repo</id>
+        <name>cayzlh-mvn-repo</name>
+        <url>https://raw.github.com/chenanyu/mavenRepository/master/repository</url>
+    </repository>
+</repositories>
+```
+### 或者, 下载代码, 编译后install到本地仓库
+
+> MBG的具体用法及配置文件等, 这里不做阐述, 查看 [MBG官方文档](http://docs.flycloud.me/docs/MBG/index.html) 即可.
   
 ---------------------------------------
 插件列表：  
