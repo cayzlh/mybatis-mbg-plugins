@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <groupId>com.cayzlh</groupId>
-    <artifactId>plugins</artifactId>
+    <artifactId>mgb-plugins</artifactId>
     <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
-    <version>1.1</version>
-    <name>plugins</name>
+    <version>1.2</version>
+    <name>mgb-plugins</name>
 
     <properties>
         <java.version>1.8</java.version>
