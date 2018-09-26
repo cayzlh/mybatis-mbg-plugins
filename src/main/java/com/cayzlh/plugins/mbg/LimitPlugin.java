@@ -147,7 +147,7 @@ public class LimitPlugin extends BasePlugin {
                 "return this;"
         );
         topLevelClass.addMethod(setPage);
-        logger.debug("itfsw(MySQL分页插件):"+topLevelClass.getType().getShortName()+"增加page方法");
+        logger.debug("(MySQL分页插件):"+topLevelClass.getType().getShortName()+"增加page方法");
 
         // !!! clear 方法增加 offset 和 rows的清理
         List<Method> methodList = topLevelClass.getMethods();
@@ -155,7 +155,7 @@ public class LimitPlugin extends BasePlugin {
             if (method.getName().equals("clear")){
                 method.addBodyLine("rows = null;");
                 method.addBodyLine("offset = null;");
-                logger.debug("itfsw(MySQL分页插件):"+topLevelClass.getType().getShortName()+"修改clear方法,增加rows和offset字段的清空");
+                logger.debug("(MySQL分页插件):"+topLevelClass.getType().getShortName()+"修改clear方法,增加rows和offset字段的清空");
             }
         }
 

@@ -157,7 +157,7 @@ public class LogicalDeletePlugin extends BasePlugin {
                         || JDBCType.VARCHAR == type) {
                     this.logicalDeleteColumn = column;
                 } else {
-                    warnings.add("itfsw(逻辑删除插件):" + introspectedTable.getFullyQualifiedTable() + "逻辑删除列(" + introspectedTable.getTableConfigurationProperty(PRO_LOGICAL_DELETE_COLUMN) + ")的类型不在支持范围（请使用数字列，字符串列，布尔列）！");
+                    warnings.add("(逻辑删除插件):" + introspectedTable.getFullyQualifiedTable() + "逻辑删除列(" + introspectedTable.getTableConfigurationProperty(PRO_LOGICAL_DELETE_COLUMN) + ")的类型不在支持范围（请使用数字列，字符串列，布尔列）！");
                 }
             }
         }
@@ -208,7 +208,7 @@ public class LogicalDeletePlugin extends BasePlugin {
             commentGenerator.addGeneralMethodComment(mLogicalDeleteByExample, introspectedTable);
             // interface 增加方法
             interfaze.addMethod(mLogicalDeleteByExample);
-            logger.debug("itfsw(逻辑删除插件):" + interfaze.getType().getShortName() + "增加方法logicalDeleteByExample。");
+            logger.debug("(逻辑删除插件):" + interfaze.getType().getShortName() + "增加方法logicalDeleteByExample。");
 
             // 2. 判断是否有主键，生成主键删除方法
             if (introspectedTable.hasPrimaryKeyColumns()) {
@@ -272,7 +272,7 @@ public class LogicalDeletePlugin extends BasePlugin {
                 // interface 增加方法
                 interfaze.addImportedTypes(importedTypes);
                 interfaze.addMethod(mLogicalDeleteByPrimaryKey);
-                logger.debug("itfsw(逻辑删除插件):" + interfaze.getType().getShortName() + "增加方法logicalDeleteByPrimaryKey。");
+                logger.debug("(逻辑删除插件):" + interfaze.getType().getShortName() + "增加方法logicalDeleteByPrimaryKey。");
 
                 // 增强selectByPrimaryKey
                 mSelectByPrimaryKey.addParameter(new Parameter(
@@ -332,7 +332,7 @@ public class LogicalDeletePlugin extends BasePlugin {
 
             logicalDeleteByExample.addElement(XmlElementGeneratorTools.getUpdateByExampleIncludeElement(introspectedTable));
             document.getRootElement().addElement(logicalDeleteByExample);
-            logger.debug("itfsw(逻辑删除插件):" + introspectedTable.getMyBatis3XmlMapperFileName() + "增加方法logicalDeleteByExample的实现。");
+            logger.debug("(逻辑删除插件):" + introspectedTable.getMyBatis3XmlMapperFileName() + "增加方法logicalDeleteByExample的实现。");
 
             // 2. 判断是否有主键，生成主键删除方法
             if (introspectedTable.hasPrimaryKeyColumns()) {
@@ -398,7 +398,7 @@ public class LogicalDeletePlugin extends BasePlugin {
                 }
 
                 document.getRootElement().addElement(logicalDeleteByPrimaryKey);
-                logger.debug("itfsw(逻辑删除插件):" + introspectedTable.getMyBatis3XmlMapperFileName() + "增加方法logicalDeleteByPrimaryKey的实现。");
+                logger.debug("(逻辑删除插件):" + introspectedTable.getMyBatis3XmlMapperFileName() + "增加方法logicalDeleteByPrimaryKey的实现。");
 
 
                 // 3. 增强selectByPrimaryKey
@@ -641,7 +641,7 @@ public class LogicalDeletePlugin extends BasePlugin {
                     mAndDeleted.setName("andDeleted");
                     mAndDeleted.addAnnotation("@Deprecated");
                     innerClass.addMethod(mAndDeleted);
-                    logger.debug("itfsw(逻辑删除插件):" + topLevelClass.getType().getShortName() + "." + innerClass.getType().getShortName() + "增加andDeleted方法。");
+                    logger.debug("(逻辑删除插件):" + topLevelClass.getType().getShortName() + "." + innerClass.getType().getShortName() + "增加andDeleted方法。");
                 }
             }
         }

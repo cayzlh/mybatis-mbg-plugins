@@ -53,7 +53,7 @@ public class ExampleTargetPlugin extends BasePlugin {
         Properties properties = getProperties();
         targetPackage = properties.getProperty(PRO_TARGET_PACKAGE);
         if (targetPackage == null){
-            warnings.add("请配置com.itfsw.mybatis.generator.plugins.ExampleTargetPlugin插件的目标包名(targetPackage)！");
+            warnings.add("请配置com.cayzlh.plugins.mbg.ExampleTargetPlugin插件的目标包名(targetPackage)！");
             return false;
         }
         return super.validate(warnings);
@@ -76,7 +76,7 @@ public class ExampleTargetPlugin extends BasePlugin {
 
         introspectedTable.setExampleType(newExampleType);
 
-        logger.debug("itfsw(Example 目标包修改插件):修改"+introspectedTable.getExampleType()+"的包到"+ ExampleTargetPlugin.targetPackage);
+        logger.debug("(Example 目标包修改插件):修改"+introspectedTable.getExampleType()+"的包到"+ ExampleTargetPlugin.targetPackage);
     }
 
 }

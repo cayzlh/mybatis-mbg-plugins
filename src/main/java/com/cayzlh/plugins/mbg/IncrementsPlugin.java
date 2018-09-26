@@ -63,7 +63,7 @@ public class IncrementsPlugin extends BasePlugin {
 
         // 插件使用前提是使用了ModelBuilderPlugin插件
         if (!PluginTools.checkDependencyPlugin(getContext(), ModelBuilderPlugin.class)) {
-            warnings.add("itfsw:插件" + this.getClass().getTypeName() + "插件需配合com.itfsw.mybatis.generator.plugins.ModelBuilderPlugin插件使用！");
+            warnings.add("插件" + this.getClass().getTypeName() + "插件需配合com.cayzlh.plugins.mbg.ModelBuilderPlugin插件使用！");
             return false;
         }
 
