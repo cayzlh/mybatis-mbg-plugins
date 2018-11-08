@@ -108,5 +108,18 @@
         </pluginManagement>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>cayzlh-sf-release</id>
+            <name>Release Repository</name>
+            <url>http://nexus.cayzlh.cn/repository/cayzlh-sf-release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>cayzlh-sf-snapshot</id>
+            <name>Snapshot Repository</name>
+            <url>http://nexus.cayzlh.cn/repository/cayzlh-sf-snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 
 </project>
